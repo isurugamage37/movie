@@ -1,0 +1,18 @@
+<div class="column" style="background-color: black;">
+<div class="movie-item" style="   border-radius: 30px; background-color: rgb(44, 43, 43);">
+  <a href="{{ 'https://www.imdb.com/title/' + movie.imdbID }}" target="_blank"><img src="{{ movie.Poster }}" alt="{{ movie.Title }} Poster"  style="   border-radius: 20px;"></a>
+    <div class="movie-details" style="color: white;">
+      <h3>{{ movie.Title }}</h3>
+      <p><strong>Year:</strong> {{ movie.Year }}</p>
+      <p *ngIf="movie.Rated"><strong>Rating:</strong> {{ movie.Rated }}</p>
+      <p *ngIf="movie.Runtime"> <strong>Running Time:</strong> {{ movie.Runtime }}</p>
+      <p *ngIf="movie.Genre"><strong>Genre:</strong> {{ movie.Genre }}</p>
+      <p *ngIf="movie.imdbRating"><strong>IMDB Rating:</strong> {{ movie.imdbRating }}</p>
+      <div class="actions">
+        <a href="{{ 'https://www.imdb.com/title/' + movie.imdbID }}" target="_blank">View on IMDb</a>
+      </div>
+      <button (click)="shareMovie()" style="background-color: rgb(206, 8, 8);color: white; border-radius: 20px;margin-top: 20px;width: 70px;height: 30px;">Share</button>
+    </div>
+  </div>
+  
+</div>

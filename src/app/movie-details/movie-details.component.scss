@@ -1,0 +1,18 @@
+.movie-details-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .poster-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .info-container {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }

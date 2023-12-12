@@ -1,0 +1,19 @@
+<div class="feedback-container" style="background-color:  rgb(184, 20, 20);;color: white; border-radius: 20px;">
+  <mat-toolbar  style="background-color:  rgb(184, 20, 20);color: white; border-radius: 20px;margin-top: 20px;">
+    <span class="title" >Feedback</span>
+  </mat-toolbar>
+
+  <div class="content">
+    <form [formGroup]="feedbackForm">
+      <div class="form-group">
+        <label for="feedbackText">Enter your feedback:</label>
+        <textarea id="feedbackText" formControlName="feedbackText"></textarea>
+      </div>
+
+      <div class="button-group">
+        <button mat-raised-button style="background-color: rgb(74, 3, 3);color: white; border-radius: 20px;" (click)="composeFeedbackEmail()">Send</button>
+        <!-- <button mat-raised-button style="background-color: rgb(74, 3, 3);color: white; border-radius: 20px;" (click)="goBack()">Back</button> -->
+      </div>
+    </form>
+  </div>
+</div>

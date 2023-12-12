@@ -1,0 +1,18 @@
+<div style="text-align: center; margin-top: 20px;background-color: black;">
+  <input [(ngModel)]="searchQuery" placeholder="Search for a movie" style="height: 30px;width: 200px;border-radius: 20px; text-align: center;">
+  <button  mat-raised-button style="background-color: rgb(206, 8, 8);color: white; border-radius: 20px;" (click)="searchMovie()">Search</button>
+</div>
+
+<div *ngIf="searchedMovies.length > 0">
+  <h2>Search Results</h2>
+  <div *ngFor="let movie of searchedMovies">
+    <app-movie-item [movie]="movie"></app-movie-item>
+  </div>
+</div>
+
+<div *ngIf="availableMovies.length > 0 && searchedMovies.length === 0">
+  <h2>Available Movies</h2>
+  <div *ngFor="let movie of availableMovies">
+    <app-movie-item [movie]="movie"></app-movie-item>
+  </div>
+</div>

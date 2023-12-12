@@ -1,0 +1,26 @@
+<!-- movie-details.component.html -->
+
+<div *ngIf="movieDetails">
+    <h2>{{ movieDetails.Title }}</h2>
+  
+    <div class="movie-details-container">
+      <div class="poster-container">
+        <img src="{{ movieDetails.Poster }}" alt="{{ movieDetails.Title }} Poster">
+      </div>
+  
+      <div class="info-container">
+        <p><strong>Year of Release:</strong> {{ movieDetails.Year }}</p>
+        <p><strong>Rating:</strong> {{ movieDetails.Rated }}</p>
+        <p><strong>Running Time:</strong> {{ movieDetails.Runtime }}</p>
+        <p><strong>Genre:</strong> {{ movieDetails.Genre }}</p>
+        <p><strong>IMDB Rating:</strong> {{ movieDetails.imdbRating }}</p>
+      </div>
+    </div>
+  
+    <!-- Add more details as needed -->
+  
+    <div class="actions">
+      <a href="{{ 'https://www.imdb.com/title/' + movieDetails.imdbID }}" target="_blank">View on IMDb</a>
+      <button (click)="shareMovie()">Share</button>
+    </div>
+  </div>

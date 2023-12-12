@@ -1,0 +1,9 @@
+<div style="background-color: black;">
+  <app-toolbar #toolbar  (showFeedBackScreenCall)="showFeedBackScreenCall($event)" (showHomeScreenCall)="showHomeScreenCall($event)"> </app-toolbar>
+  
+  <app-feedback *ngIf="showFeedback"></app-feedback>
+  <app-movie-search *ngIf="showHome"></app-movie-search>
+  <app-movie-details *ngIf="showHome"></app-movie-details> 
+</div>
+
+
